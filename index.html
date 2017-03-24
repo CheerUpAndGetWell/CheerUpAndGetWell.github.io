@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cheer Up And Get Well</title>
+<audio autoplay loop>
+	<source src="background.mp3" type="audio/mpeg"></source>
+</audio>
+</head>
+
+<body>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="https://cheerupandgetwell.github.io">Home</a>
+  <a href="https://cheerupandgetwell.github.io/AboutThisSite">About The Site</a>
+  <a href="#">Submit a Quote</a>
+  <a href="#">Send To Friend</a>
+  <a href="#">About Me</a>
+</div>
+<span style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<div id="main">
+<h1 id="message"></h1>
+</div>
+</body>
+</html>
+
+<style>
+h1{
+	color:yellow;
+	text-align:center;
+	font-size:50px;
+	background-color:#ADD8E6;
+	border:medium;
+	border-radius: 20px;
+	padding-left:50px;
+}
+body {
+    font-family: "Lato", sans-serif;
+    repeat:no-repeat;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+span{
+	position:fixed;
+	padding-top: 42px;
+	padding-left:30px;
+}
+</style>
+
+<script>
+var r = Math.floor(Math.random() * 101);
+if (r == 50){
+	document.body.style.backgroundImage = "url('rare.png')";
+	document.getElementById("message").innerHTML = "YOU ARE SO LUCKY! This backdrop only shows up once every 100 loads!";
+}else{
+	function myFunction() {
+    var d = new Date();
+    var n = d.getDay();
+	if (n == 0){
+		document.body.style.backgroundImage = "url('oasis.png')";
+		document.getElementById("message").innerHTML = "You walk through life much easier with a smile on your face. Well and some eyes but...";
+	} else if (n == 1){
+		document.body.style.backgroundImage = "url('forest.png')";
+		document.getElementById("message").innerHTML = "Do what makes you happy, be with who makes you smile, laugh as much as you breathe, and love as long as you live.";
+	} else if (n == 2){
+		document.body.style.backgroundImage = "url('beach.png')";
+		document.getElementById("message").innerHTML = "Knowing that someone is thinking about you can be enough to make you smile. And trust me, somebody is.";
+	} else if (n == 3){
+		document.body.style.backgroundImage = "url('wave.png')";
+		document.getElementById("message").innerHTML = "Life is short, smile while you still have teeth.";
+	} else if (n == 4){
+		document.body.style.backgroundImage = "url('mt.png')";
+		document.getElementById("message").innerHTML = "You are somebody's reason to smile.";
+	} else if (n == 5){
+		document.body.style.backgroundImage = "url('space.png')";
+		document.getElementById("message").innerHTML = "The world can't be all bad if you are in it.";
+	} else if (n == 6){
+		document.body.style.backgroundImage = "url('arch.png')";
+		document.getElementById("message").innerHTML = "You are one of the reasons the people around you get out of bed for.";
+	} else {
+		console.log("Error");
+	}
+		
+	}
+	myFunction();
+}
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+
+/'0 is Sunday'/
+/'1 is Monday'/
+/'2 is Tuesday'/
+/'3 is Wednesday'/
+/'4 is Thursday'/
+/'5 is Friday'/
+/'6 is Saturday'/
+</script>
