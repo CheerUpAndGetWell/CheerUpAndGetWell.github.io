@@ -21,7 +21,7 @@
 </div>
 <span style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776;</span>
 <div id="main">
-<h1 id="message"></h1>
+<h1 id="message">This is not a valid password. <a href="https://cheerupandgetwell.github.io/SpecialMessages">Try Again?</a></h1>
 </div>
 </body>
 </html>
@@ -89,6 +89,21 @@ span{
 	padding-top: 42px;
 	padding-left:30px;
 }
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
 </style>
 
 <script>
@@ -106,5 +121,10 @@ var pass = prompt("What is your message password?");
 if(pass === "Hope"){
 	document.getElementById("message").innerHTML = "Josie, you are one of the reasons I get out of bed. You have helped me in a way nobody could before. You have made me feel like I can believe what this song says can happen. Thank you Josie. Turn up your volume and listen to how you inspired me. Listen to how I changed my site to try and help inspire others. I cry for a different reason. - The Developer";
 	document.body.style.backgroundImage = "url('josie.png')";
-}
+}else if(pass === "hope"){
+	document.getElementById("message").innerHTML = "Josie, you are one of the reasons I get out of bed. You have helped me in a way nobody could before. You have made me feel like I can believe what this song says can happen. Thank you Josie. Turn up your volume and listen to how you inspired me. Listen to how I changed my site to try and help inspire others. I cry for a different reason. - The Developer";
+	document.body.style.backgroundImage = "url('josie.png')";
+}else{
+	document.body.style.backgroundColor = "black";
+}	
 </script>
