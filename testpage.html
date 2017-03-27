@@ -7,16 +7,12 @@
 
 
 <body>
-<form action="test2.php" method="post">
-	<ul>
-    	<li>
-        	<label for="name">Message</label>
-            <input type="text" id="msg" name="msg"/>
-        </li>
-        <li>
-        	<input type="submit" name="sub" value="Send"/>
-        </li>
-    </ul>
-</form>
+<form method="post" action="sendmail.php"> 
+  Email: <input name="email" type="text" /><br /> 
+  Message:<br /> 
+  <textarea name="message" rows="15" cols="40"> 
+  </textarea><br /> 
+  <input type="submit" /> 
+</form>>
 </body>
 </html>
