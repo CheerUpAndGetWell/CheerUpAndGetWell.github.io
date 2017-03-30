@@ -117,11 +117,9 @@ function closeNav() {
 }
 </script>
 <script>
-var pass = prompt("What is your message password?");
-if(pass === "Hope"){
-	document.getElementById("message").innerHTML = "Josie, you are one of the reasons I get out of bed. You have helped me in a way nobody could before. You have made me feel like I can believe what this song says can happen. Thank you Josie. Turn up your volume and listen to how you inspired me. Listen to how I changed my site to try and help inspire others. I cry for a different reason. - The Developer";
-	document.body.style.backgroundImage = "url('josie.png')";
-}else if(pass === "hope"){
+var inp = prompt("What is your message password?");
+var pass = inp.toUpperCase();
+if(pass == "HOPE"){
 	document.getElementById("message").innerHTML = "Josie, you are one of the reasons I get out of bed. You have helped me in a way nobody could before. You have made me feel like I can believe what this song says can happen. Thank you Josie. Turn up your volume and listen to how you inspired me. Listen to how I changed my site to try and help inspire others. I cry for a different reason. - The Developer";
 	document.body.style.backgroundImage = "url('josie.png')";
 }else{
