@@ -99,6 +99,53 @@ span{
 	padding-left:30px;
 }
 </style>
+
+<script>
+var d = new Date();
+var n = d.getDay();
+var r = Math.floor(Math.random() * 101);
+/*0 is Sunday
+1 is Monday
+2 is Tuesday
+3 is Wednesday
+4 is Thursday
+5 is Friday
+6 is Saturday*/
+if (r == 50){
+	document.body.style.backgroundImage = "url('rare.png')";
+	document.getElementById("message").innerHTML = "YOU ARE SO LUCKY! This backdrop only shows up once every 100 loads!";
+}else{
+	function myFunction() {
+	if (n == 0){
+		document.body.style.backgroundImage = "url('oasis.png')";
+	} else if (n == 1){
+		document.body.style.backgroundImage = "url('forest.png')";
+	} else if (n == 2){
+		document.body.style.backgroundImage = "url('beach.png')";
+	} else if (n == 3){
+		document.body.style.backgroundImage = "url('wave.png')";
+	} else if (n == 4){
+		document.body.style.backgroundImage = "url('mt.png')";
+	} else if (n == 5){
+		document.body.style.backgroundImage = "url('space.png')";
+	} else if (n == 6){
+		document.body.style.backgroundImage = "url('arch.png')";
+	} else {
+		console.log("Error");
+	}
+		
+	}
+	myFunction();
+}
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
 <script>
 var msgs = [
 /*0*/"If you are reading this, either I am a bad developer, or you have something wrong.",
@@ -988,50 +1035,4 @@ function everySixty(){
 	}
 }
 everySixty();
-</script>
-<script>
-var d = new Date();
-var n = d.getDay();
-var r = Math.floor(Math.random() * 101);
-/*0 is Sunday
-1 is Monday
-2 is Tuesday
-3 is Wednesday
-4 is Thursday
-5 is Friday
-6 is Saturday*/
-if (r == 50){
-	document.body.style.backgroundImage = "url('rare.png')";
-	document.getElementById("message").innerHTML = "YOU ARE SO LUCKY! This backdrop only shows up once every 100 loads!";
-}else{
-	function myFunction() {
-	if (n == 0){
-		document.body.style.backgroundImage = "url('oasis.png')";
-	} else if (n == 1){
-		document.body.style.backgroundImage = "url('forest.png')";
-	} else if (n == 2){
-		document.body.style.backgroundImage = "url('beach.png')";
-	} else if (n == 3){
-		document.body.style.backgroundImage = "url('wave.png')";
-	} else if (n == 4){
-		document.body.style.backgroundImage = "url('mt.png')";
-	} else if (n == 5){
-		document.body.style.backgroundImage = "url('space.png')";
-	} else if (n == 6){
-		document.body.style.backgroundImage = "url('arch.png')";
-	} else {
-		console.log("Error");
-	}
-		
-	}
-	myFunction();
-}
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-}
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-}
 </script>
