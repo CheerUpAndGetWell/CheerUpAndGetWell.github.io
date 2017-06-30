@@ -1,0 +1,1032 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cheer Up And Get Well</title>
+<audio autoplay loop>
+	<source src="background.mp3" type="audio/mpeg"></source>
+</audio>
+</head>
+
+<body>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="https://cheerupandgetwell.github.io">Home</a>
+  <a href="https://cheerupandgetwell.github.io/AboutThisSite">About The Site</a>
+  <a href="https://cheerupandgetwell.github.io/SubmitAQuote">Submit a Quote</a>
+  <a href="https://cheerupandgetwell.github.io/SendToAFriend">Send To Friend</a>
+  <a href="https://cheerupandgetwell.github.io/SpecialMessages">Special Messages</a>
+  <a href="#">About Me</a>
+</div>
+<span style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<div id="main">
+<h1 id="message"></h1>
+</div>
+</body>
+</html>
+
+<style>
+h1{
+	color:yellow;
+	text-align:center;
+	font-size:50px;
+	background-color:#ADD8E6;
+	border:medium;
+	border-radius: 20px;
+	padding-left:75px;
+}
+#update{
+	background-color:black;
+	position:fixed;
+}
+h2{
+	color:white;
+	text-align:center;
+	font-size:50px;
+	border:medium;
+}
+body {
+    font-family: "Lato", sans-serif;
+	repeat:no-repeat;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+span{
+	position:fixed;
+	padding-top: 42px;
+	padding-left:30px;
+}
+</style>
+
+<script>
+var d = new Date();
+var n = d.getDay();
+var r = Math.floor(Math.random() * 101);
+/*0 is Sunday
+1 is Monday
+2 is Tuesday
+3 is Wednesday
+4 is Thursday
+5 is Friday
+6 is Saturday*/
+if (r == 50){
+	document.body.style.backgroundImage = "url('rare.png')";
+	document.getElementById("message").innerHTML = "YOU ARE SO LUCKY! This backdrop only shows up once every 100 loads!";
+}else{
+	function myFunction() {
+	if (n == 0){
+		document.body.style.backgroundImage = "url('oasis.png')";
+	} else if (n == 1){
+		document.body.style.backgroundImage = "url('forest.png')";
+	} else if (n == 2){
+		document.body.style.backgroundImage = "url('beach.png')";
+	} else if (n == 3){
+		document.body.style.backgroundImage = "url('wave.png')";
+	} else if (n == 4){
+		document.body.style.backgroundImage = "url('mt.png')";
+	} else if (n == 5){
+		document.body.style.backgroundImage = "url('space.png')";
+	} else if (n == 6){
+		document.body.style.backgroundImage = "url('arch.png')";
+	} else {
+		console.log("Error");
+	}
+		
+	}
+	myFunction();
+}
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+<script>
+var msgs = [
+/*0*/"If you are reading this, either I am a bad developer, or you have something wrong.",
+/*1*/"You walk through life much easier with a smile on your face. And their are so many reasons to smile.", 
+/*2*/"There is always a reason to smile. Find it.",
+/*3*/"Knowing that someone is thinking about you can be enough to make you smile. And trust me, somebody is.",
+/*4*/"Life is short, smile while you still have teeth.",
+/*5*/"You are somebody's reason to smile.",
+/*6*/"The world can't be all bad if you in are it.",
+/*7*/"You are one of the reasons the people around you get out of bed for.",
+/*8*/"Be happy. It will drive the people who want you to be sad crazy.",
+/*9*/"Save each happy moment with the people you love. Then draw on them when you need them.",
+/*10*/"Smiling doesn't show life is perfect. It shows that you can apriciate the things in life that you love.",
+/*11*/"Be crazy, stupid, silly, or wierd. The people who care about you just want to see you be you.",
+/*12*/"The less you give a damn the happier you will be.",
+/*13*/"Whatever you decide to do, make sure it makes you happy.",
+/*14*/"It is not selfish to take care of yourself and make your happiness a priorty. It is necessary.",
+/*15*/"Be happy about yourself. You don't need anyones aproval to be yourself.",
+/*16*/"Life can be described in one sentence. It did not go as planned but thats ok.",
+/*17*/"If people say you can't or that your trash, remember, it's a trash CAN not a trash CANNOT.",
+/*18*/"The smartest investment you can make is in yourself.",
+/*19*/"It doesn't matter who hurt you or broke you down. What matters is who made you smile again.",
+/*20*/"Your never fully dressed without a smile.",
+/*21*/"You never loose. You either win our you learn.",
+/*22*/"Look for something positive about this moment.  Even if you have to look a little harder than usual, it still exists.",
+/*23*/"When you smile about the life you live, you end up living a life worth smiling about.",
+/*24*/"It's better to spend time alone then to spend time with negative company.",
+/*25*/"Your value doesn’t decrease based on someone’s inability to see your worth.  It’s their loss, not yours.",
+/*26*/"One of the most freeing things we learn in life is that we don’t have to like everyone, everyone doesn’t have to like us, and that’s OK.",
+/*27*/"When someone says, “You’ve changed,” it’s not always a bad thing.  Sometimes it just means you stopped living your life their way.",
+/*28*/"The unhappiest people in this world are the people who care the most about what everyone else thinks.",
+/*29*/"It’s always better to be at the bottom of the ladder you want to climb than the top of the one you don’t.",
+/*30*/"Work to create a life that feels right to YOU, not one that looks right to everyone else.",
+/*31*/"Normal is just a setting on the dryer.",
+/*32*/"No matter how long it takes, it will get better.  Tough situations build strong people in the end.",
+/*33*/"At the end of the day, you can either focus on what’s tearing you apart, or what’s holding you together.",
+/*34*/"One of the most rewarding moments in life is when you finally find the courage to let go of what you can’t change.",
+/*35*/"You yourself, as much as anybody in the entire universe, deserve your love and affection.",
+/*36*/"Always be a first-rate version of yourself, instead of a second-rate version of somebody else.",
+/*37*/"You were not born a winner, and you were not born a loser. You are what you make yourself be.",
+/*38*/"No one can make you feel inferior without your consent.",
+/*39*/"Someone else’s opinion of you does not have to become your reality.",
+/*40*/"There is only one corner of the universe you can be certain of improving, and that’s your own self.",
+/*41*/"You have within you right now, everything you need to deal with whatever the world can throw at you.",
+/*42*/"Aerodynamically the bumblebee shouldn’t be able to fly, but the bumblebee doesn’t know that so it goes on flying anyway.",
+/*45*/"Confidence comes not from always being right but from not fearing to be wrong.",
+/*46*/"Experience will give you the power and confidence to be yourself.",
+/*47*/"I am convinced all of humanity is born with more gifts than we know. Most are born geniuses and just get de-geniused rapidly.",
+/*48*/"Thousands of geniuses live and die undiscovered – either by themselves or by others. Discover your geniuses.",
+/*49*/"Always act like you’re wearing an invisible crown.",
+/*50*/"If you want a change, make a change. Wishing never got anybody anywhere.",
+/*51*/"Too many people overvalue what they are not, and undervalue what they are.",
+/*52*/"Of all the judgments we pass in life, none is more important than the judgment we pass on ourselves.",
+/*53*/"The greatest success is successful self-acceptance.",
+/*54*/"Love is the great miracle cure. Loving ourselves works miracles in our lives.",
+/*55*/"Never bend your head. Hold it high. Look the world straight in the eye.",
+/*56*/"Today you are you, that is truer than true. There is no one alive who is youer than you.",
+/*57*/"People are like stained-glass windows. They sparkle and shine when the sun is out, but when the darkness sets in their true beauty is revealed only if there is light from within.",
+/*58*/"Self worth cannot be verified by others. You are worthy because you say it is so. If you depend on others for your value it is other-worth.",
+/*59*/"A commen mistake when trying to make something foolproof, is overestimating complete fools.",
+/*60*/"Life us too short to be serious all the time. So, if you can't laugh at yourself, call me, I will laugh at you.",
+/*61*/"Common sense is like deoderant. The poeple who need it never use it.",
+/*62*/"Being called wierd is like being called limited edition. Meaning you're something people don't see that often. Remember that."];
+var month = d.getMonth();
+var month = month +1;
+var nd = new Date();
+var date = nd.getDate();
+function everySixty(){
+	if(month == 1){
+		//January
+		if(date == 1){
+			document.getElementById("message").innerHTML = msgs[1];
+		}else if(date == 2){
+			document.getElementById("message").innerHTML = msgs[2];
+		}else if(date == 3){
+			document.getElementById("message").innerHTML = msgs[3];
+		}else if(date == 4){
+			document.getElementById("message").innerHTML = msgs[4];
+		}else if(date == 5){
+			document.getElementById("message").innerHTML = msgs[5];
+		}else if(date == 6){
+			document.getElementById("message").innerHTML = msgs[6];
+		}else if(date == 7){
+			document.getElementById("message").innerHTML = msgs[7];
+		}else if(date == 8){
+			document.getElementById("message").innerHTML = msgs[8];
+		}else if(date == 9){
+			document.getElementById("message").innerHTML = msgs[9];
+		}else if(date == 10){
+			document.getElementById("message").innerHTML = msgs[10];
+		}else if(date == 11){
+			document.getElementById("message").innerHTML = msgs[11];
+		}else if(date == 12){
+			document.getElementById("message").innerHTML = msgs[12];
+		}else if(date == 13){
+			document.getElementById("message").innerHTML = msgs[13];
+		}else if(date == 14){
+			document.getElementById("message").innerHTML = msgs[14];
+		}else if(date == 15){
+			document.getElementById("message").innerHTML = msgs[15];
+		}else if(date == 16){
+			document.getElementById("message").innerHTML = msgs[16];
+		}else if(date == 17){
+			document.getElementById("message").innerHTML = msgs[17];
+		}else if(date == 18){
+			document.getElementById("message").innerHTML = msgs[18];
+		}else if(date == 19){
+			document.getElementById("message").innerHTML = msgs[19];
+		}else if(date == 20){
+			document.getElementById("message").innerHTML = msgs[20];
+		}else if(date == 21){
+			document.getElementById("message").innerHTML = msgs[21];
+		}else if(date == 22){
+			document.getElementById("message").innerHTML = msgs[22];
+		}else if(date == 23){
+			document.getElementById("message").innerHTML = msgs[23];
+		}else if(date == 24){
+			document.getElementById("message").innerHTML = msgs[24];
+		}else if(date == 25){
+			document.getElementById("message").innerHTML = msgs[25];
+		}else if(date == 26){
+			document.getElementById("message").innerHTML = msgs[26];
+		}else if(date == 27){
+			document.getElementById("message").innerHTML = msgs[27];
+		}else if(date == 28){
+			document.getElementById("message").innerHTML = msgs[28];
+		}else if(date == 29){
+			document.getElementById("message").innerHTML = msgs[29];
+		}else if(date == 30){
+			document.getElementById("message").innerHTML = msgs[30];
+		}else if(date == 31){
+			document.getElementById("message").innerHTML = msgs[31];
+		}else{
+			console.log("Error");
+		}
+	}
+	else if(month == 2){
+		//February
+		if(date == 1){
+			document.getElementById("message").innerHTML = msgs[1 + 31];
+		}else if(date == 2){
+			document.getElementById("message").innerHTML = msgs[2 + 31];
+		}else if(date == 3){
+			document.getElementById("message").innerHTML = msgs[3 + 31];
+		}else if(date == 4){
+			document.getElementById("message").innerHTML = msgs[4 + 31];
+		}else if(date == 5){
+			document.getElementById("message").innerHTML = msgs[5 + 31];
+		}else if(date == 6){
+			document.getElementById("message").innerHTML = msgs[6 + 31];
+		}else if(date == 7){
+			document.getElementById("message").innerHTML = msgs[7 + 31];
+		}else if(date == 8){
+			document.getElementById("message").innerHTML = msgs[8 + 31];
+		}else if(date == 9){
+			document.getElementById("message").innerHTML = msgs[9 + 31];
+		}else if(date == 10){
+			document.getElementById("message").innerHTML = msgs[10 + 31];
+		}else if(date == 11){
+			document.getElementById("message").innerHTML = msgs[11 + 31];
+		}else if(date == 12){
+			document.getElementById("message").innerHTML = msgs[12 + 31];
+		}else if(date == 13){
+			document.getElementById("message").innerHTML = msgs[13 + 31];
+		}else if(date == 14){
+			document.getElementById("message").innerHTML = msgs[14 + 31];
+		}else if(date == 15){
+			document.getElementById("message").innerHTML = msgs[15 + 31];
+		}else if(date == 16){
+			document.getElementById("message").innerHTML = msgs[16 + 31];
+		}else if(date == 17){
+			document.getElementById("message").innerHTML = msgs[17 + 31];
+		}else if(date == 18){
+			document.getElementById("message").innerHTML = msgs[18 + 31];
+		}else if(date == 19){
+			document.getElementById("message").innerHTML = msgs[19 + 31];
+		}else if(date == 20){
+			document.getElementById("message").innerHTML = msgs[20 + 31];
+		}else if(date == 21){
+			document.getElementById("message").innerHTML = msgs[21 + 31];
+		}else if(date == 22){
+			document.getElementById("message").innerHTML = msgs[22 + 31];
+		}else if(date == 23){
+			document.getElementById("message").innerHTML = msgs[23 + 31];
+		}else if(date == 24){
+			document.getElementById("message").innerHTML = msgs[24 + 31];
+		}else if(date == 25){
+			document.getElementById("message").innerHTML = msgs[25 + 31];
+		}else if(date == 26){
+			document.getElementById("message").innerHTML = msgs[26 + 31];
+		}else if(date == 27){
+			document.getElementById("message").innerHTML = msgs[27 + 31];
+		}else if(date == 28){
+			document.getElementById("message").innerHTML = msgs[28 + 31];
+		}else if(date == 29){
+			document.getElementById("message").innerHTML = msgs[29 + 31];
+		}else if(date == 30){
+			document.getElementById("message").innerHTML = msgs[30 + 31];
+		}else if(date == 31){
+			document.getElementById("message").innerHTML = msgs[31 + 31];
+		}else{
+			console.log("Error");
+		}
+	}
+	else if(month == 3){
+		//March
+		if(date == 1){
+			document.getElementById("message").innerHTML = msgs[1];
+		}else if(date == 2){
+			document.getElementById("message").innerHTML = msgs[2];
+		}else if(date == 3){
+			document.getElementById("message").innerHTML = msgs[3];
+		}else if(date == 4){
+			document.getElementById("message").innerHTML = msgs[4];
+		}else if(date == 5){
+			document.getElementById("message").innerHTML = msgs[5];
+		}else if(date == 6){
+			document.getElementById("message").innerHTML = msgs[6];
+		}else if(date == 7){
+			document.getElementById("message").innerHTML = msgs[7];
+		}else if(date == 8){
+			document.getElementById("message").innerHTML = msgs[8];
+		}else if(date == 9){
+			document.getElementById("message").innerHTML = msgs[9];
+		}else if(date == 10){
+			document.getElementById("message").innerHTML = msgs[10];
+		}else if(date == 11){
+			document.getElementById("message").innerHTML = msgs[11];
+		}else if(date == 12){
+			document.getElementById("message").innerHTML = msgs[12];
+		}else if(date == 13){
+			document.getElementById("message").innerHTML = msgs[13];
+		}else if(date == 14){
+			document.getElementById("message").innerHTML = msgs[14];
+		}else if(date == 15){
+			document.getElementById("message").innerHTML = msgs[15];
+		}else if(date == 16){
+			document.getElementById("message").innerHTML = msgs[16];
+		}else if(date == 17){
+			document.getElementById("message").innerHTML = msgs[17];
+		}else if(date == 18){
+			document.getElementById("message").innerHTML = msgs[18];
+		}else if(date == 19){
+			document.getElementById("message").innerHTML = msgs[19];
+		}else if(date == 20){
+			document.getElementById("message").innerHTML = msgs[20];
+		}else if(date == 21){
+			document.getElementById("message").innerHTML = msgs[21];
+		}else if(date == 22){
+			document.getElementById("message").innerHTML = msgs[22];
+		}else if(date == 23){
+			document.getElementById("message").innerHTML = msgs[23];
+		}else if(date == 24){
+			document.getElementById("message").innerHTML = msgs[24];
+		}else if(date == 25){
+			document.getElementById("message").innerHTML = msgs[25];
+		}else if(date == 26){
+			document.getElementById("message").innerHTML = msgs[26];
+		}else if(date == 27){
+			document.getElementById("message").innerHTML = msgs[27];
+		}else if(date == 28){
+			document.getElementById("message").innerHTML = msgs[28];
+		}else if(date == 29){
+			document.getElementById("message").innerHTML = msgs[29];
+		}else if(date == 30){
+			document.getElementById("message").innerHTML = msgs[30];
+		}else if(date == 31){
+			document.getElementById("message").innerHTML = msgs[31];
+		}else{
+			console.log("Error");
+		}
+	}
+	else if(month == 4){
+		//April
+		if(date == 1){
+			document.getElementById("message").innerHTML = msgs[1 + 31];
+		}else if(date == 2){
+			document.getElementById("message").innerHTML = msgs[2 + 31];
+		}else if(date == 3){
+			document.getElementById("message").innerHTML = msgs[3 + 31];
+		}else if(date == 4){
+			document.getElementById("message").innerHTML = msgs[4 + 31];
+		}else if(date == 5){
+			document.getElementById("message").innerHTML = msgs[5 + 31];
+		}else if(date == 6){
+			document.getElementById("message").innerHTML = msgs[6 + 31];
+		}else if(date == 7){
+			document.getElementById("message").innerHTML = msgs[7 + 31];
+		}else if(date == 8){
+			document.getElementById("message").innerHTML = msgs[8 + 31];
+		}else if(date == 9){
+			document.getElementById("message").innerHTML = msgs[9 + 31];
+		}else if(date == 10){
+			document.getElementById("message").innerHTML = msgs[10 + 31];
+		}else if(date == 11){
+			document.getElementById("message").innerHTML = msgs[11 + 31];
+		}else if(date == 12){
+			document.getElementById("message").innerHTML = msgs[12 + 31];
+		}else if(date == 13){
+			document.getElementById("message").innerHTML = msgs[13 + 31];
+		}else if(date == 14){
+			document.getElementById("message").innerHTML = msgs[14 + 31];
+		}else if(date == 15){
+			document.getElementById("message").innerHTML = msgs[15 + 31];
+		}else if(date == 16){
+			document.getElementById("message").innerHTML = msgs[16 + 31];
+		}else if(date == 17){
+			document.getElementById("message").innerHTML = msgs[17 + 31];
+		}else if(date == 18){
+			document.getElementById("message").innerHTML = msgs[18 + 31];
+		}else if(date == 19){
+			document.getElementById("message").innerHTML = msgs[19 + 31];
+		}else if(date == 20){
+			document.getElementById("message").innerHTML = msgs[20 + 31];
+		}else if(date == 21){
+			document.getElementById("message").innerHTML = msgs[21 + 31];
+		}else if(date == 22){
+			document.getElementById("message").innerHTML = msgs[22 + 31];
+		}else if(date == 23){
+			document.getElementById("message").innerHTML = msgs[23 + 31];
+		}else if(date == 24){
+			document.getElementById("message").innerHTML = msgs[24 + 31];
+		}else if(date == 25){
+			document.getElementById("message").innerHTML = msgs[25 + 31];
+		}else if(date == 26){
+			document.getElementById("message").innerHTML = msgs[26 + 31];
+		}else if(date == 27){
+			document.getElementById("message").innerHTML = msgs[27 + 31];
+		}else if(date == 28){
+			document.getElementById("message").innerHTML = msgs[28 + 31];
+		}else if(date == 29){
+			document.getElementById("message").innerHTML = msgs[29 + 31];
+		}else if(date == 30){
+			document.getElementById("message").innerHTML = msgs[30 + 31];
+		}else if(date == 31){
+			document.getElementById("message").innerHTML = msgs[31 + 31];
+		}else{
+			console.log("Error");
+		}
+	}
+	else if(month == 5){
+		//May
+		if(date == 1){
+			document.getElementById("message").innerHTML = msgs[1];
+		}else if(date == 2){
+			document.getElementById("message").innerHTML = msgs[2];
+		}else if(date == 3){
+			document.getElementById("message").innerHTML = msgs[3];
+		}else if(date == 4){
+			document.getElementById("message").innerHTML = msgs[4];
+		}else if(date == 5){
+			document.getElementById("message").innerHTML = msgs[5];
+		}else if(date == 6){
+			document.getElementById("message").innerHTML = msgs[6];
+		}else if(date == 7){
+			document.getElementById("message").innerHTML = msgs[7];
+		}else if(date == 8){
+			document.getElementById("message").innerHTML = msgs[8];
+		}else if(date == 9){
+			document.getElementById("message").innerHTML = msgs[9];
+		}else if(date == 10){
+			document.getElementById("message").innerHTML = msgs[10];
+		}else if(date == 11){
+			document.getElementById("message").innerHTML = msgs[11];
+		}else if(date == 12){
+			document.getElementById("message").innerHTML = msgs[12];
+		}else if(date == 13){
+			document.getElementById("message").innerHTML = msgs[13];
+		}else if(date == 14){
+			document.getElementById("message").innerHTML = msgs[14];
+		}else if(date == 15){
+			document.getElementById("message").innerHTML = msgs[15];
+		}else if(date == 16){
+			document.getElementById("message").innerHTML = msgs[16];
+		}else if(date == 17){
+			document.getElementById("message").innerHTML = msgs[17];
+		}else if(date == 18){
+			document.getElementById("message").innerHTML = msgs[18];
+		}else if(date == 19){
+			document.getElementById("message").innerHTML = msgs[19];
+		}else if(date == 20){
+			document.getElementById("message").innerHTML = msgs[20];
+		}else if(date == 21){
+			document.getElementById("message").innerHTML = msgs[21];
+		}else if(date == 22){
+			document.getElementById("message").innerHTML = msgs[22];
+		}else if(date == 23){
+			document.getElementById("message").innerHTML = msgs[23];
+		}else if(date == 24){
+			document.getElementById("message").innerHTML = msgs[24];
+		}else if(date == 25){
+			document.getElementById("message").innerHTML = msgs[25];
+		}else if(date == 26){
+			document.getElementById("message").innerHTML = msgs[26];
+		}else if(date == 27){
+			document.getElementById("message").innerHTML = msgs[27];
+		}else if(date == 28){
+			document.getElementById("message").innerHTML = msgs[28];
+		}else if(date == 29){
+			document.getElementById("message").innerHTML = msgs[29];
+		}else if(date == 30){
+			document.getElementById("message").innerHTML = msgs[30];
+		}else if(date == 31){
+			document.getElementById("message").innerHTML = msgs[31];
+		}else{
+			console.log("Error");
+		}
+	}
+	else if(month == 6){
+		//June
+		if(date == 1){
+			document.getElementById("message").innerHTML = msgs[1 + 31];
+		}else if(date == 2){
+			document.getElementById("message").innerHTML = msgs[2 + 31];
+		}else if(date == 3){
+			document.getElementById("message").innerHTML = msgs[3 + 31];
+		}else if(date == 4){
+			document.getElementById("message").innerHTML = msgs[4 + 31];
+		}else if(date == 5){
+			document.getElementById("message").innerHTML = msgs[5 + 31];
+		}else if(date == 6){
+			document.getElementById("message").innerHTML = msgs[6 + 31];
+		}else if(date == 7){
+			document.getElementById("message").innerHTML = msgs[7 + 31];
+		}else if(date == 8){
+			document.getElementById("message").innerHTML = msgs[8 + 31];
+		}else if(date == 9){
+			document.getElementById("message").innerHTML = msgs[9 + 31];
+		}else if(date == 10){
+			document.getElementById("message").innerHTML = msgs[10 + 31];
+		}else if(date == 11){
+			document.getElementById("message").innerHTML = msgs[11 + 31];
+		}else if(date == 12){
+			document.getElementById("message").innerHTML = msgs[12 + 31];
+		}else if(date == 13){
+			document.getElementById("message").innerHTML = msgs[13 + 31];
+		}else if(date == 14){
+			document.getElementById("message").innerHTML = msgs[14 + 31];
+		}else if(date == 15){
+			document.getElementById("message").innerHTML = msgs[15 + 31];
+		}else if(date == 16){
+			document.getElementById("message").innerHTML = msgs[16 + 31];
+		}else if(date == 17){
+			document.getElementById("message").innerHTML = msgs[17 + 31];
+		}else if(date == 18){
+			document.getElementById("message").innerHTML = msgs[18 + 31];
+		}else if(date == 19){
+			document.getElementById("message").innerHTML = msgs[19 + 31];
+		}else if(date == 20){
+			document.getElementById("message").innerHTML = msgs[20 + 31];
+		}else if(date == 21){
+			document.getElementById("message").innerHTML = msgs[21 + 31];
+		}else if(date == 22){
+			document.getElementById("message").innerHTML = msgs[22 + 31];
+		}else if(date == 23){
+			document.getElementById("message").innerHTML = msgs[23 + 31];
+		}else if(date == 24){
+			document.getElementById("message").innerHTML = msgs[24 + 31];
+		}else if(date == 25){
+			document.getElementById("message").innerHTML = msgs[25 + 31];
+		}else if(date == 26){
+			document.getElementById("message").innerHTML = msgs[26 + 31];
+		}else if(date == 27){
+			document.getElementById("message").innerHTML = msgs[27 + 31];
+		}else if(date == 28){
+			document.getElementById("message").innerHTML = msgs[28 + 31];
+		}else if(date == 29){
+			document.getElementById("message").innerHTML = msgs[29 + 31];
+		}else if(date == 30){
+			document.getElementById("message").innerHTML = msgs[30 + 31];
+		}else if(date == 31){
+			document.getElementById("message").innerHTML = msgs[31 + 31];
+		}else{
+			console.log("Error");
+		}
+	}
+	else if(month == 7){
+		//July
+		if(date == 1){
+			document.getElementById("message").innerHTML = msgs[1];
+		}else if(date == 2){
+			document.getElementById("message").innerHTML = msgs[2];
+		}else if(date == 3){
+			document.getElementById("message").innerHTML = msgs[3];
+		}else if(date == 4){
+			document.getElementById("message").innerHTML = msgs[4];
+		}else if(date == 5){
+			document.getElementById("message").innerHTML = msgs[5];
+		}else if(date == 6){
+			document.getElementById("message").innerHTML = msgs[6];
+		}else if(date == 7){
+			document.getElementById("message").innerHTML = msgs[7];
+		}else if(date == 8){
+			document.getElementById("message").innerHTML = msgs[8];
+		}else if(date == 9){
+			document.getElementById("message").innerHTML = msgs[9];
+		}else if(date == 10){
+			document.getElementById("message").innerHTML = msgs[10];
+		}else if(date == 11){
+			document.getElementById("message").innerHTML = msgs[11];
+		}else if(date == 12){
+			document.getElementById("message").innerHTML = msgs[12];
+		}else if(date == 13){
+			document.getElementById("message").innerHTML = msgs[13];
+		}else if(date == 14){
+			document.getElementById("message").innerHTML = msgs[14];
+		}else if(date == 15){
+			document.getElementById("message").innerHTML = msgs[15];
+		}else if(date == 16){
+			document.getElementById("message").innerHTML = msgs[16];
+		}else if(date == 17){
+			document.getElementById("message").innerHTML = msgs[17];
+		}else if(date == 18){
+			document.getElementById("message").innerHTML = msgs[18];
+		}else if(date == 19){
+			document.getElementById("message").innerHTML = msgs[19];
+		}else if(date == 20){
+			document.getElementById("message").innerHTML = msgs[20];
+		}else if(date == 21){
+			document.getElementById("message").innerHTML = msgs[21];
+		}else if(date == 22){
+			document.getElementById("message").innerHTML = msgs[22];
+		}else if(date == 23){
+			document.getElementById("message").innerHTML = msgs[23];
+		}else if(date == 24){
+			document.getElementById("message").innerHTML = msgs[24];
+		}else if(date == 25){
+			document.getElementById("message").innerHTML = msgs[25];
+		}else if(date == 26){
+			document.getElementById("message").innerHTML = msgs[26];
+		}else if(date == 27){
+			document.getElementById("message").innerHTML = msgs[27];
+		}else if(date == 28){
+			document.getElementById("message").innerHTML = msgs[28];
+		}else if(date == 29){
+			document.getElementById("message").innerHTML = msgs[29];
+		}else if(date == 30){
+			document.getElementById("message").innerHTML = msgs[30];
+		}else if(date == 31){
+			document.getElementById("message").innerHTML = msgs[31];
+		}else{
+			console.log("Error");
+		}
+	}
+	else if(month == 8){
+		//August
+		if(date == 1){
+			document.getElementById("message").innerHTML = msgs[1 + 31];
+		}else if(date == 2){
+			document.getElementById("message").innerHTML = msgs[2 + 31];
+		}else if(date == 3){
+			document.getElementById("message").innerHTML = msgs[3 + 31];
+		}else if(date == 4){
+			document.getElementById("message").innerHTML = msgs[4 + 31];
+		}else if(date == 5){
+			document.getElementById("message").innerHTML = msgs[5 + 31];
+		}else if(date == 6){
+			document.getElementById("message").innerHTML = msgs[6 + 31];
+		}else if(date == 7){
+			document.getElementById("message").innerHTML = msgs[7 + 31];
+		}else if(date == 8){
+			document.getElementById("message").innerHTML = msgs[8 + 31];
+		}else if(date == 9){
+			document.getElementById("message").innerHTML = msgs[9 + 31];
+		}else if(date == 10){
+			document.getElementById("message").innerHTML = msgs[10 + 31];
+		}else if(date == 11){
+			document.getElementById("message").innerHTML = msgs[11 + 31];
+		}else if(date == 12){
+			document.getElementById("message").innerHTML = msgs[12 + 31];
+		}else if(date == 13){
+			document.getElementById("message").innerHTML = msgs[13 + 31];
+		}else if(date == 14){
+			document.getElementById("message").innerHTML = msgs[14 + 31];
+		}else if(date == 15){
+			document.getElementById("message").innerHTML = msgs[15 + 31];
+		}else if(date == 16){
+			document.getElementById("message").innerHTML = msgs[16 + 31];
+		}else if(date == 17){
+			document.getElementById("message").innerHTML = msgs[17 + 31];
+		}else if(date == 18){
+			document.getElementById("message").innerHTML = msgs[18 + 31];
+		}else if(date == 19){
+			document.getElementById("message").innerHTML = msgs[19 + 31];
+		}else if(date == 20){
+			document.getElementById("message").innerHTML = msgs[20 + 31];
+		}else if(date == 21){
+			document.getElementById("message").innerHTML = msgs[21 + 31];
+		}else if(date == 22){
+			document.getElementById("message").innerHTML = msgs[22 + 31];
+		}else if(date == 23){
+			document.getElementById("message").innerHTML = msgs[23 + 31];
+		}else if(date == 24){
+			document.getElementById("message").innerHTML = msgs[24 + 31];
+		}else if(date == 25){
+			document.getElementById("message").innerHTML = msgs[25 + 31];
+		}else if(date == 26){
+			document.getElementById("message").innerHTML = msgs[26 + 31];
+		}else if(date == 27){
+			document.getElementById("message").innerHTML = msgs[27 + 31];
+		}else if(date == 28){
+			document.getElementById("message").innerHTML = msgs[28 + 31];
+		}else if(date == 29){
+			document.getElementById("message").innerHTML = msgs[29 + 31];
+		}else if(date == 30){
+			document.getElementById("message").innerHTML = msgs[30 + 31];
+		}else if(date == 31){
+			document.getElementById("message").innerHTML = msgs[31 + 31];
+		}else{
+			console.log("Error");
+		}
+	}
+	else if(month == 9){
+		//September
+		if(date == 1){
+			document.getElementById("message").innerHTML = msgs[1];
+		}else if(date == 2){
+			document.getElementById("message").innerHTML = msgs[2];
+		}else if(date == 3){
+			document.getElementById("message").innerHTML = msgs[3];
+		}else if(date == 4){
+			document.getElementById("message").innerHTML = msgs[4];
+		}else if(date == 5){
+			document.getElementById("message").innerHTML = msgs[5];
+		}else if(date == 6){
+			document.getElementById("message").innerHTML = msgs[6];
+		}else if(date == 7){
+			document.getElementById("message").innerHTML = msgs[7];
+		}else if(date == 8){
+			document.getElementById("message").innerHTML = msgs[8];
+		}else if(date == 9){
+			document.getElementById("message").innerHTML = msgs[9];
+		}else if(date == 10){
+			document.getElementById("message").innerHTML = msgs[10];
+		}else if(date == 11){
+			document.getElementById("message").innerHTML = msgs[11];
+		}else if(date == 12){
+			document.getElementById("message").innerHTML = msgs[12];
+		}else if(date == 13){
+			document.getElementById("message").innerHTML = msgs[13];
+		}else if(date == 14){
+			document.getElementById("message").innerHTML = msgs[14];
+		}else if(date == 15){
+			document.getElementById("message").innerHTML = msgs[15];
+		}else if(date == 16){
+			document.getElementById("message").innerHTML = msgs[16];
+		}else if(date == 17){
+			document.getElementById("message").innerHTML = msgs[17];
+		}else if(date == 18){
+			document.getElementById("message").innerHTML = msgs[18];
+		}else if(date == 19){
+			document.getElementById("message").innerHTML = msgs[19];
+		}else if(date == 20){
+			document.getElementById("message").innerHTML = msgs[20];
+		}else if(date == 21){
+			document.getElementById("message").innerHTML = msgs[21];
+		}else if(date == 22){
+			document.getElementById("message").innerHTML = msgs[22];
+		}else if(date == 23){
+			document.getElementById("message").innerHTML = msgs[23];
+		}else if(date == 24){
+			document.getElementById("message").innerHTML = msgs[24];
+		}else if(date == 25){
+			document.getElementById("message").innerHTML = msgs[25];
+		}else if(date == 26){
+			document.getElementById("message").innerHTML = msgs[26];
+		}else if(date == 27){
+			document.getElementById("message").innerHTML = msgs[27];
+		}else if(date == 28){
+			document.getElementById("message").innerHTML = msgs[28];
+		}else if(date == 29){
+			document.getElementById("message").innerHTML = msgs[29];
+		}else if(date == 30){
+			document.getElementById("message").innerHTML = msgs[30];
+		}else if(date == 31){
+			document.getElementById("message").innerHTML = msgs[31];
+		}else{
+			console.log("Error");
+		}
+	}
+	else if(month == 10){
+		//October
+		if(date == 1){
+			document.getElementById("message").innerHTML = msgs[1 + 30];
+		}else if(date == 2){
+			document.getElementById("message").innerHTML = msgs[2 + 30];
+		}else if(date == 3){
+			document.getElementById("message").innerHTML = msgs[3 + 30];
+		}else if(date == 4){
+			document.getElementById("message").innerHTML = msgs[4 + 30];
+		}else if(date == 5){
+			document.getElementById("message").innerHTML = msgs[5 + 30];
+		}else if(date == 6){
+			document.getElementById("message").innerHTML = msgs[6 + 30];
+		}else if(date == 7){
+			document.getElementById("message").innerHTML = msgs[7 + 30];
+		}else if(date == 8){
+			document.getElementById("message").innerHTML = msgs[8 + 30];
+		}else if(date == 9){
+			document.getElementById("message").innerHTML = msgs[9 + 30];
+		}else if(date == 10){
+			document.getElementById("message").innerHTML = msgs[10 + 30];
+		}else if(date == 11){
+			document.getElementById("message").innerHTML = msgs[11 + 30];
+		}else if(date == 12){
+			document.getElementById("message").innerHTML = msgs[12 + 30];
+		}else if(date == 13){
+			document.getElementById("message").innerHTML = msgs[13 + 30];
+		}else if(date == 14){
+			document.getElementById("message").innerHTML = msgs[14 + 30];
+		}else if(date == 15){
+			document.getElementById("message").innerHTML = msgs[15 + 30];
+		}else if(date == 16){
+			document.getElementById("message").innerHTML = msgs[16 + 30];
+		}else if(date == 17){
+			document.getElementById("message").innerHTML = msgs[17 + 30];
+		}else if(date == 18){
+			document.getElementById("message").innerHTML = msgs[18 + 30];
+		}else if(date == 19){
+			document.getElementById("message").innerHTML = msgs[19 + 30];
+		}else if(date == 20){
+			document.getElementById("message").innerHTML = msgs[20 + 30];
+		}else if(date == 21){
+			document.getElementById("message").innerHTML = msgs[21 + 30];
+		}else if(date == 22){
+			document.getElementById("message").innerHTML = msgs[22 + 30];
+		}else if(date == 23){
+			document.getElementById("message").innerHTML = msgs[23 + 30];
+		}else if(date == 24){
+			document.getElementById("message").innerHTML = msgs[24 + 30];
+		}else if(date == 25){
+			document.getElementById("message").innerHTML = msgs[25 + 30];
+		}else if(date == 26){
+			document.getElementById("message").innerHTML = msgs[26 + 30];
+		}else if(date == 27){
+			document.getElementById("message").innerHTML = msgs[27 + 30];
+		}else if(date == 28){
+			document.getElementById("message").innerHTML = msgs[28 + 30];
+		}else if(date == 29){
+			document.getElementById("message").innerHTML = msgs[29 + 30];
+		}else if(date == 30){
+			document.getElementById("message").innerHTML = msgs[30 + 30];
+		}else if(date == 31){
+			document.getElementById("message").innerHTML = msgs[31 + 30];
+		}else{
+			console.log("Error");
+		}
+	}
+	else if(month == 11){
+		//November
+		if(date == 1){
+			document.getElementById("message").innerHTML = msgs[1];
+		}else if(date == 2){
+			document.getElementById("message").innerHTML = msgs[2];
+		}else if(date == 3){
+			document.getElementById("message").innerHTML = msgs[3];
+		}else if(date == 4){
+			document.getElementById("message").innerHTML = msgs[4];
+		}else if(date == 5){
+			document.getElementById("message").innerHTML = msgs[5];
+		}else if(date == 6){
+			document.getElementById("message").innerHTML = msgs[6];
+		}else if(date == 7){
+			document.getElementById("message").innerHTML = msgs[7];
+		}else if(date == 8){
+			document.getElementById("message").innerHTML = msgs[8];
+		}else if(date == 9){
+			document.getElementById("message").innerHTML = msgs[9];
+		}else if(date == 10){
+			document.getElementById("message").innerHTML = msgs[10];
+		}else if(date == 11){
+			document.getElementById("message").innerHTML = msgs[11];
+		}else if(date == 12){
+			document.getElementById("message").innerHTML = msgs[12];
+		}else if(date == 13){
+			document.getElementById("message").innerHTML = msgs[13];
+		}else if(date == 14){
+			document.getElementById("message").innerHTML = msgs[14];
+		}else if(date == 15){
+			document.getElementById("message").innerHTML = msgs[15];
+		}else if(date == 16){
+			document.getElementById("message").innerHTML = msgs[16];
+		}else if(date == 17){
+			document.getElementById("message").innerHTML = msgs[17];
+		}else if(date == 18){
+			document.getElementById("message").innerHTML = msgs[18];
+		}else if(date == 19){
+			document.getElementById("message").innerHTML = msgs[19];
+		}else if(date == 20){
+			document.getElementById("message").innerHTML = msgs[20];
+		}else if(date == 21){
+			document.getElementById("message").innerHTML = msgs[21];
+		}else if(date == 22){
+			document.getElementById("message").innerHTML = msgs[22];
+		}else if(date == 23){
+			document.getElementById("message").innerHTML = msgs[23];
+		}else if(date == 24){
+			document.getElementById("message").innerHTML = msgs[24];
+		}else if(date == 25){
+			document.getElementById("message").innerHTML = msgs[25];
+		}else if(date == 26){
+			document.getElementById("message").innerHTML = msgs[26];
+		}else if(date == 27){
+			document.getElementById("message").innerHTML = msgs[27];
+		}else if(date == 28){
+			document.getElementById("message").innerHTML = msgs[28];
+		}else if(date == 29){
+			document.getElementById("message").innerHTML = msgs[29];
+		}else if(date == 30){
+			document.getElementById("message").innerHTML = msgs[30];
+		}else if(date == 31){
+			document.getElementById("message").innerHTML = msgs[31];
+		}else{
+			console.log("Error");
+		}
+	}
+	else if(month == 12){
+		//December
+		if(date == 1){
+			document.getElementById("message").innerHTML = msgs[1 + 30];
+		}else if(date == 2){
+			document.getElementById("message").innerHTML = msgs[2 + 30];
+		}else if(date == 3){
+			document.getElementById("message").innerHTML = msgs[3 + 30];
+		}else if(date == 4){
+			document.getElementById("message").innerHTML = msgs[4 + 30];
+		}else if(date == 5){
+			document.getElementById("message").innerHTML = msgs[5 + 30];
+		}else if(date == 6){
+			document.getElementById("message").innerHTML = msgs[6 + 30];
+		}else if(date == 7){
+			document.getElementById("message").innerHTML = msgs[7 + 30];
+		}else if(date == 8){
+			document.getElementById("message").innerHTML = msgs[8 + 30];
+		}else if(date == 9){
+			document.getElementById("message").innerHTML = msgs[9 + 30];
+		}else if(date == 10){
+			document.getElementById("message").innerHTML = msgs[10 + 30];
+		}else if(date == 11){
+			document.getElementById("message").innerHTML = msgs[11 + 30];
+		}else if(date == 12){
+			document.getElementById("message").innerHTML = msgs[12 + 30];
+		}else if(date == 13){
+			document.getElementById("message").innerHTML = msgs[13 + 30];
+		}else if(date == 14){
+			document.getElementById("message").innerHTML = msgs[14 + 30];
+		}else if(date == 15){
+			document.getElementById("message").innerHTML = msgs[15 + 30];
+		}else if(date == 16){
+			document.getElementById("message").innerHTML = msgs[16 + 30];
+		}else if(date == 17){
+			document.getElementById("message").innerHTML = msgs[17 + 30];
+		}else if(date == 18){
+			document.getElementById("message").innerHTML = msgs[18 + 30];
+		}else if(date == 19){
+			document.getElementById("message").innerHTML = msgs[19 + 30];
+		}else if(date == 20){
+			document.getElementById("message").innerHTML = msgs[20 + 30];
+		}else if(date == 21){
+			document.getElementById("message").innerHTML = msgs[21 + 30];
+		}else if(date == 22){
+			document.getElementById("message").innerHTML = msgs[22 + 30];
+		}else if(date == 23){
+			document.getElementById("message").innerHTML = msgs[23 + 30];
+		}else if(date == 24){
+			document.getElementById("message").innerHTML = msgs[24 + 30];
+		}else if(date == 25){
+			document.getElementById("message").innerHTML = msgs[25 + 30];
+		}else if(date == 26){
+			document.getElementById("message").innerHTML = msgs[26 + 30];
+		}else if(date == 27){
+			document.getElementById("message").innerHTML = msgs[27 + 30];
+		}else if(date == 28){
+			document.getElementById("message").innerHTML = msgs[28 + 30];
+		}else if(date == 29){
+			document.getElementById("message").innerHTML = msgs[29 + 30];
+		}else if(date == 30){
+			document.getElementById("message").innerHTML = msgs[30 + 30];
+		}else if(date == 31){
+			document.getElementById("message").innerHTML = msgs[31 + 30];
+		}else{
+			console.log("Error");
+		}
+	}
+	else{
+		console.log("undefined");
+	}
+}
+everySixty();
+</script>
